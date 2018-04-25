@@ -23,7 +23,7 @@ class Number{
   public boolean isOdd(){
     return !isEven();
   }
-  
+
   public boolean isPrime(){
     int index = 2;
     while(isGreaterThan(index)){
@@ -36,7 +36,7 @@ class Number{
   }
 
   public boolean isSquare(){
-    int index = this.number;
+    int index = this.number >> 1;
     while(index > 1){
       if (isEqualToSquareOf(index)) {
         return true;
@@ -47,7 +47,7 @@ class Number{
   }
 
   public static void main(String[] args) {
-    Number number = new Number(4);
+    Number number = new Number(12);
     System.out.println(number.isEven());
     System.out.println(number.isOdd());
     System.out.println(number.isPrime());
